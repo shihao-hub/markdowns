@@ -1,10 +1,37 @@
-# Python
-
 > 2024/06/16
+>
+> Bootstrap 1
+>
+> C 2
 
-**1.** 
+**1.** 需要使用 HTML5 文档类型（Doctype）因此，请在使用 Bootstrap 项目的开头包含下面的代码段。
+
+```html
+<!DOCTYPE html>
+<html>
+....
+</html>
+```
+
+如果在 Bootstrap 创建的网页开头不使用 HTML5 的文档类型（Doctype），您可能会面临一些浏览器显示不一致的问题，甚至可能面临一些特定情境下的不一致，以致于您的代码不能通过 W3C 标准的验证。
+
+**2.** 使用 Python 的正则表达式进行字符串替换的时候，突然意识到，这正则表达式是用 C 语言实现的，C 语言处理字符串的性能很高。所以根本不需要担心性能问题！（所以这是不是意味着，C 语言有机会也需要精通？但是感觉语言这东西，学是不可能完全精通的，只有可能精通一部分，而那部分是用到的时候好好学学，然后精通...）
+
+**3.** Bootstrap 概览
+
+```text
+Bootstrap css
+
+value attr tag_name
+viewport name meta
+img-responsive class img
+container class div
 
 
+
+```
+
+**4.** 学 bat 的时候发现，问 gpt 能回答不少不需要我搜索的内容，挺省事的。
 
 
 
@@ -15,6 +42,8 @@
 
 
 > 2024/06/15
+>
+> Python *
 
 **1.** Restful 关键的一句话是：将一切视为资源！
 

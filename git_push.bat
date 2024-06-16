@@ -1,5 +1,7 @@
-echo git add . | bash.exe
-echo git commit -m "general commit" | bash.exe
-echo git push origin master:main | bash.exe
+git add . 
+git commit -m "general commit" 
+git push origin master:main 
+
+pause:main 
 
 pause
