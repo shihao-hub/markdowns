@@ -1,4 +1,16 @@
-# 2024/06/22
+# 2024/06/23
+
+**1.** 今天学习了 XML 文件（菜鸟教程）
+
+稍微总结一下，XML 和 JSON 一样都是存储数据的，只不过 XML 更详细一点，可以作为介于软件和硬件之间的另一种存储数据的方式，在持久化领域比 JSON 更好，因为它的信息更加详细，而且更适宜人阅读。
+
+![image-20240623121324511](C:\Users\29580\Desktop\markdowns\Typora_study_notes\assets\image-20240623121324511.png)
+
+
+
+
+
+# 2024/06/22 ...
 
 > { Python }
 >
@@ -68,11 +80,60 @@
 
 **2.** 找到个好网站：[极客教程](https://geek-docs.com)，而且暂时总结了一点，那就是 Python 我看再多的书，还是需要实战才行，我说的实战是关于那些库函数的使用，用到的时候去弄懂，这样日积月累才能彻彻底底地掌握 Python。
 
+**3.** Bootstrap 值得一学，CSS 框架入门。
+
 ## Python 库
 
 ### PyQt5
 
 > Qt5
+
+[手把手教你学习 PyQT5](https://blog.csdn.net/weixin_42475060/article/details/130327901)
+
+今日总结一下：
+
+目前我的体会是 Qt5 的主要难点是设计，前端展示怎么好看又方便才是主要的！
+
+能找到个模板最佳，直接套模板实现功能即可。后端不需要太过于在意前端，毕竟前端是需要点美学功底的。能做出来还凑活的界面就够了。其他的交给专业的来。
+
+**Q:  为什么不用浏览器的前端呢？那个明显更好看，交互的时候直接启动本地端口不就行了。不联网使用的产品，用 HTTP 协议又不是不行。**
+
+3-6-2、QTextEdit综合案例
+
+
+
+> **《PyQt5 快速开发与实战》**
+
+
+
+#### 第六章 PyQt5 布局管理
+
+
+
+### matplotlib
+
+>
+
+```python
+# 1.导入相关库
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
+# 2.创建figure画布对象
+figure = plt.figure()
+# 3.获取对应位置的axes坐标系对象
+axes1 = figure.add_subplot(2, 1, 1)
+axes2 = figure.add_subplot(2, 1, 2)
+# 4.调用axes对象，进行对应位置的图形绘制
+axes1.plot([1, 3, 5, 7], [4, 9, 6, 8])
+axes2.plot([1, 2, 4, 5], [8, 4, 6, 2])
+# 5.显示图形
+figure.show()
+
+# Result: png
+```
+
+
 
 ### tqdm
 
@@ -114,11 +175,75 @@ PyPDF2 是一个功能丰富的 Python 库，用于处理 PDF 文件。无论是
 
 ### PyMuPDF
 
-> 
+> MuPDF
+>
+> 但是我发现了，它的不同版本，变化很大，查资料的时候乱七八糟的，api 都对不上，学习成本有点高。好无语，不兼容以前的吗？哪有你这样写代码的。
 
 [Python 处理 PDF](https://blog.csdn.net/ling620/article/details/120035699)（这个挺好的）
 
+[好家伙！神器啊！Python 处理 PDF —— PyMuPDF 的安装与使用！](https://cloud.tencent.com/developer/article/2104045)（和上面这个好像是同一个）
+
 ![image-20240622134620011](C:\Users\29580\Desktop\markdowns\Typora_study_notes\assets\image-20240622134620011.png)
+
+```txt
+直接将整个类发给 gpt3.5，问题：帮忙解析一下，我刚刚发给你的内容中，公共函数的含义。
+下面是它的解析内容（不得不说，如果能够熟练使用 gpt，对个人能力的提升是巨大的）
+
+在您提供的内容中，Page 类定义了多个公共函数和方法，以下是一些主要的：
+
+__init__: 构造函数，用于初始化页面对象。
+add_link: 添加一个新的链接到页面。
+add_annot: 添加一个新的注释到页面。
+add_widget: 添加一个新的表单控件到页面。
+annot_xrefs: 获取页面中所有注释的 xref 列表。
+annotations: 获取页面中的所有注释。
+delete_link: 删除页面中的一个链接。
+delete_annot: 删除页面中的一个注释。
+draw_image: 在页面上绘制图像。
+draw_rect: 在页面上绘制矩形。
+draw_line: 在页面上绘制线条。
+draw_circle: 在页面上绘制圆形。
+draw椭圆形: 在页面上绘制椭圆形。
+draw_polygon: 在页面上绘制多边形。
+draw_path: 在页面上绘制路径。
+draw_text: 在页面上绘制文本。
+draw_link: 在页面上绘制链接。
+draw_annot: 在页面上绘制注释。
+draw_widget: 在页面上绘制表单控件。
+extract_text: 从页面中提取文本。
+get_images: 获取页面中定义的所有图像。
+get_oc_items: 获取页面中使用的 OCGs 和 OCMDs。
+get_textbox: 从页面中提取文本框的文本。
+get_textpage: 获取页面的文本页对象。
+get_xobjects: 获取页面中定义的所有 xobjects。
+insert_font: 向页面中插入字体。
+links: 生成页面中的所有链接。
+load_annot: 加载页面中的注释。
+load_links: 加载页面中的第一个链接。
+load_widget: 加载页面中的表单控件。
+mediabox: 页面的 MediaBox。
+rotation: 页面的旋转角度。
+rotation_matrix: 页面的旋转矩阵。
+set_artbox: 设置页面的 ArtBox。
+set_bleedbox: 设置页面的 BleedBox。
+set_cropbox: 设置页面的 CropBox。
+set_language: 设置页面的默认语言。
+set_mediabox: 设置页面的 MediaBox。
+set_rotation: 设置页面的旋转角度。
+set_trimbox: 设置页面的 TrimBox。
+widgets: 生成页面中的所有表单控件。
+wrap_contents: 确保页面处于平衡的图形状态。
+xref: 页面的 PDF xref 编号。
+此外，还有一些静态方法和私有方法，以及一些属性定义，例如 rect、language、transformation_matrix 等。
+
+请注意，这个列表可能不全面，因为代码中可能还包含其他方法和属性。
+```
+
+
+
+
+
+
 
 
 
